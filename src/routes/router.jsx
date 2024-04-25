@@ -3,6 +3,7 @@ import {
 } from "react-router-dom";
 import Root from "../MainLayout/Root";
 import Home from "../Pages/Home/Home";
+import AddSpot from "../Pages/AddSpot/AddSpot";
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>
+            },
+            {
+                path: "/addSpot",
+                element: <AddSpot></AddSpot>
             }
         ]
     },

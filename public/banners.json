@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "place_name": "Grand Canyon National Park",
     "category_name": "United States of America",
     "slogan": "Discover the Majesty of Nature",
     "short_description": "Explore the breathtaking vistas and awe-inspiring landscapes of one of the world's most iconic natural wonders.",
@@ -8,6 +9,7 @@
   },
   {
     "id": 2,
+    "place_name": "Banff National Park",
     "category_name": "Canada",
     "slogan": "Immerse Yourself in Natural Beauty",
     "short_description": "Experience the pristine wilderness and majestic mountains of Canada's oldest national park.",
@@ -15,6 +17,7 @@
   },
   {
     "id": 3,
+    "place_name": "Iguazu Falls",
     "category_name": "Brazil",
     "slogan": "Feel the Power of Nature",
     "short_description": "Witness the sheer magnitude and raw beauty of one of the world's most spectacular waterfalls.",
@@ -22,6 +25,7 @@
   },
   {
     "id": 5,
+    "place_name": "Chichen Itza",
     "category_name": "Mexico",
     "slogan": "Step Back in Time",
     "short_description": "Explore the ancient ruins of a UNESCO World Heritage site and uncover the mysteries of the Mayan civilization.",

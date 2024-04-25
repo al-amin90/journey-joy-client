@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const NavLinks = <>
-        <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Home</Link>
+        <Link to="/" className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Home</Link>
         <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>All Spots</Link>
-        <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Add Spot</Link>
+        <Link to="/addSpot" className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Add Spot</Link>
         <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>My List</Link>
     </>
 

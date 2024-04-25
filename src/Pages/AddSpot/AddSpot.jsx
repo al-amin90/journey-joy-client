@@ -30,7 +30,7 @@ const AddSpot = () => {
             <div className="shadow-lg rounded-3xl bg-white/80 backdrop-blur-md p-5 border mx-auto md:w-[85%] pt-10">
                 {/* Heading */}
                 <div className="mt-5 mb-10">
-                    <p className="flex items-center justify-center text-3xl font-semibold">
+                    <p className="flex items-center text-center justify-center text-3xl font-semibold">
                         <span className="">
                             <span className="text-[#2BA2FF]">
                                 {update ? "Update " : "Add "}
@@ -44,7 +44,7 @@ const AddSpot = () => {
 
                 {/* form */}
                 <form onSubmit={handleAddProduct}>
-                    <div className="flex gap-8 ">
+                    <div className="flex flex-col md:flex-row gap-8 ">
                         <div className="flex-1">
                             <label className="block font-semibold mb-2 " htmlFor="spotName">
                                 Spot Name

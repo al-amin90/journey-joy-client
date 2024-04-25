@@ -10,6 +10,7 @@ import 'swiper/css/effect-fade';
 
 import { Autoplay, EffectFade } from 'swiper/modules';
 import { useEffect, useState } from "react";
+import TouristSpots from "../TouristSpots/TouristSpots";
 
 
 const Banner = () => {
@@ -38,16 +39,16 @@ const Banner = () => {
                 className="mySwiper"
             >
                 {
-                    banners.map(ban => <SwiperSlide>
-                        <div className="md:h-[calc(100vh-95px)] h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ban.image_url})` }}>
+                    banners.map(ban => <SwiperSlide key={ban.id}>
+                        <div className="md:h-[calc(100vh-95px)] h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ban?.image_url})` }}>
                             <div className="bg-black md:w-1/2 h-full bg-opacity-60 ">
-                                <div className="mx-auto h-full w-[85%] flex items-center">
+                                <div className="mx-auto h-full w-[90%] md:w-[85%] flex items-center">
                                     <div className=" mt-10 md:mt-0 text-white w-full md:w-auto">
                                         <p className="text-2xl md:text-3xl lg:text-5xl w-11/12 font-bold text-center md:text-left">
-                                            {ban.slogan}
+                                            {ban?.slogan}
                                         </p>
                                         <p className="font-medium mt-5 text-sm md:text-base text-center md:text-left">
-                                            {ban.short_description}
+                                            {ban?.short_description}
                                         </p>
 
                                         <div className="flex justify-center md:justify-start">
@@ -70,6 +71,7 @@ const Banner = () => {
                     </SwiperSlide>)
                 }
             </Swiper>
+            <TouristSpots banners={banners}></TouristSpots>
         </div >
     );
 };

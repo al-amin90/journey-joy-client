@@ -1,4 +1,5 @@
-import { BiSolidAlarmAdd } from "react-icons/bi";
+import { MdPlaylistAddCircle } from "react-icons/md";
+import add from "../../assets/add.png"
 
 const AddSpot = () => {
     const update = false
@@ -23,14 +24,13 @@ const AddSpot = () => {
     }
 
     return (
-        <div className="max-w-[1920px] mx-auto md:w-[85%] pt-10">
-            <div className="shadow-lg p-5 border">
+        <div className="pb-14 bg-contain bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${add})` }}
+        >
+            <div className="shadow-lg rounded-3xl bg-white/80 backdrop-blur-md p-5 border mx-auto md:w-[85%] pt-10">
                 {/* Heading */}
-                <div className="mt-5 mb-8">
+                <div className="mt-5 mb-10">
                     <p className="flex items-center justify-center text-3xl font-semibold">
-                        <span className="mr-3 text-[#2BA2FF]">
-                            <BiSolidAlarmAdd />
-                        </span>
                         <span className="">
                             <span className="text-[#2BA2FF]">
                                 {update ? "Update " : "Add "}
@@ -91,18 +91,6 @@ const AddSpot = () => {
                                 <option defaultValue="Sunny Spectacle">Sunny Spectacle</option>
                             </select>
 
-                            <label className="block mt-4 font-semibold mb-2 " htmlFor="visitors">
-                                Total Visitors PerYear
-                            </label>
-                            <input
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
-                                defaultValue={"" || ""}
-                                type="number"
-                                placeholder="Enter Total Visitors"
-                                id="visitors"
-                                name="visitors"
-                            />
-
                             <label className="block mt-4 font-semibold mb-2 " htmlFor="travel_time">
                                 Travel Time
                             </label>
@@ -115,6 +103,17 @@ const AddSpot = () => {
                                 name="travel_time"
                             />
 
+                            <label className="block mt-4 font-semibold mb-2 " htmlFor="visitors">
+                                Total Visitors PerYear
+                            </label>
+                            <input
+                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                defaultValue={"" || ""}
+                                type="number"
+                                placeholder="Enter Total Visitors"
+                                id="visitors"
+                                name="visitors"
+                            />
 
                         </div>
                         {/* Right side */}
@@ -174,7 +173,7 @@ const AddSpot = () => {
                     </div>
 
                     <input
-                        className="px-4 w-full py-2 mt-4 rounded hover:bg-[#0593ff]  bg-[#2BA2FF] duration-200 text-white cursor-pointer font-semibold"
+                        className="px-4 w-full py-2 mt-4  hover:bg-[#0593ff]  bg-[#2BA2FF] duration-200 rounded-full text-white cursor-pointer font-semibold"
                         type="submit"
                         value={update ? "Update Spot" : "Add Spot"}
                     />

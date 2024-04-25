@@ -1,12 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const NavLinks = <>
-        <Link to="/" className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Home</Link>
-        <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>All Spots</Link>
-        <Link to="/addSpot" className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>Add Spot</Link>
-        <Link className='text-base mr-3 px-2 hover:border-b-2 border-[#2BA2FF] hover:text-[#2BA2FF] font-bold'>My List</Link>
+        <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "border-b-2 mr-3 px-2 text-base text-[#2BA2FF] border-[#2BA2FF] font-bold" : "text-base mr-3 px-2 hover:border-b-2  hover:text-[#2BA2FF] "
+            }>Home
+        </NavLink>
+        <NavLink
+            to="/allSpot"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "border-b-2 mr-3 px-2 text-base text-[#2BA2FF] border-[#2BA2FF] font-bold" : "text-base mr-3 px-2 hover:border-b-2  hover:text-[#2BA2FF] "
+            }>All Spots
+        </NavLink>
+        <NavLink
+            to="/addSpot"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "border-b-2 mr-3 px-2 text-base text-[#2BA2FF] border-[#2BA2FF] font-bold" : "text-base mr-3 px-2 hover:border-b-2  hover:text-[#2BA2FF] "
+            }>Add Spot
+        </NavLink>
+        <NavLink
+            to="/myList"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "border-b-2 mr-3 px-2 text-base text-[#2BA2FF] border-[#2BA2FF] font-bold" : "text-base mr-3 px-2 hover:border-b-2  hover:text-[#2BA2FF] "
+            }>My List
+        </NavLink>
+
+
     </>
 
     return (

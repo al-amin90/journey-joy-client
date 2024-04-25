@@ -9,8 +9,19 @@ import 'swiper/css/effect-fade';
 
 
 import { Autoplay, EffectFade } from 'swiper/modules';
+import { useEffect, useState } from "react";
+
 
 const Banner = () => {
+    const [banners, setBanners] = useState([])
+
+    useEffect(() => {
+        fetch('/banners.json')
+            .then(res => res.json())
+            .then(data => setBanners(data))
+    }, [])
+
+
     return (
         <div>
             <Swiper
@@ -26,45 +37,40 @@ const Banner = () => {
                 modules={[EffectFade, Autoplay]}
                 className="mySwiper"
             >
-                {/* slider 1  */}
-                <SwiperSlide>
-                    <div className="md:h-[500px] h-auto">
-                        <div className="h-full flex flex-col md:flex-row justify-between gap-10 items-center">
-                            <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                                <div className="font-semibold border pr-4 border-[#81BCFB] w-fit rounded-full bg-[#0D396A] text-white mb-3 text-center md:text-left flex items-center">
-                                    <div className="bg-[#2BA2FF] text-white mr-3 text-xl px-2 py-2 w-fit flex items-center justify-center rounded-full ">
-                                        <SiFireship />
+                {
+                    banners.map(ban => <SwiperSlide>
+                        <div className="md:h-[calc(100vh-95px)] h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ban.image_url})` }}>
+                            <div className="bg-black md:w-1/2 h-full bg-opacity-60 ">
+                                <div className="mx-auto h-full w-[85%] flex items-center">
+                                    <div className=" mt-10 md:mt-0 text-white w-full md:w-auto">
+                                        <p className="text-2xl md:text-3xl lg:text-5xl w-11/12 font-bold text-center md:text-left">
+                                            {ban.slogan}
+                                        </p>
+                                        <p className="font-medium mt-5 text-sm md:text-base text-center md:text-left">
+                                            {ban.short_description}
+                                        </p>
+
+                                        <div className="flex justify-center md:justify-start">
+                                            <button className="bg-[#2BA2FF] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#0D396A]">
+                                                <span className="mr-3">
+                                                    <i className="bx bx-hive"></i>
+                                                </span>
+                                                Explore Now
+                                            </button>
+                                        </div>
                                     </div>
-                                    Top Brands
+
+                                    {/* left */}
+                                    <div>
+
+                                    </div>
                                 </div>
-
-                                <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                                    Discover the Future <br />
-                                    of Electronics
-                                </p>
-                                <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
-                                    Stay ahead with the latest tech trends and innovations.
-                                </p>
-
-                                <div className="flex justify-center md:justify-start">
-                                    <button className="bg-[#2BA2FF] py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-[#0D396A]">
-                                        <span className="mr-3">
-                                            <i className="bx bx-hive"></i>
-                                        </span>
-                                        Explore Now
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* left */}
-                            <div className="w-full md:max-h-[400px] h-[250px] flex-1 mb-10 md:mb-0">
-
                             </div>
                         </div>
-                    </div>
-                </SwiperSlide>
+                    </SwiperSlide>)
+                }
             </Swiper>
-        </div>
+        </div >
     );
 };
 

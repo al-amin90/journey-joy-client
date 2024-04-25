@@ -1,50 +1,30 @@
 [
   {
     "id": 1,
-    "place_name": "Grand Canyon National Park",
     "category_name": "United States of America",
     "slogan": "Discover the Majesty of Nature",
     "short_description": "Explore the breathtaking vistas and awe-inspiring landscapes of one of the world's most iconic natural wonders.",
-    "image_url": "https://example.com/grand_canyon.jpg"
+    "image_url": "https://i.postimg.cc/g2889HKS/grand-canyon-1.jpg"
   },
   {
     "id": 2,
-    "place_name": "Banff National Park",
     "category_name": "Canada",
     "slogan": "Immerse Yourself in Natural Beauty",
     "short_description": "Experience the pristine wilderness and majestic mountains of Canada's oldest national park.",
-    "image_url": "https://example.com/banff.jpg"
+    "image_url": "https://i.postimg.cc/Zq3SxC4y/img2-wallspic-com-reflection-apple-macbook-pro-sky-mountain-lake-2560x1440.jpg"
   },
   {
     "id": 3,
-    "place_name": "Iguazu Falls",
     "category_name": "Brazil",
     "slogan": "Feel the Power of Nature",
     "short_description": "Witness the sheer magnitude and raw beauty of one of the world's most spectacular waterfalls.",
-    "image_url": "https://example.com/iguazu_falls.jpg"
-  },
-  {
-    "id": 4,
-    "place_name": "Perito Moreno Glacier",
-    "category_name": "Argentina",
-    "slogan": "Journey to the Frozen Wonderland",
-    "short_description": "Embark on an unforgettable adventure to marvel at the awe-inspiring beauty of a massive glacier.",
-    "image_url": "https://example.com/perito_moreno_glacier.jpg"
+    "image_url": "https://i.postimg.cc/1R0zZYxN/iguazu-falls-iguazu-national-park-brazil-argentina-paraguay-border-1171077586-0c0af92a39e24d179bf.png"
   },
   {
     "id": 5,
-    "place_name": "Chichen Itza",
     "category_name": "Mexico",
     "slogan": "Step Back in Time",
     "short_description": "Explore the ancient ruins of a UNESCO World Heritage site and uncover the mysteries of the Mayan civilization.",
-    "image_url": "https://example.com/chichen_itza.jpg"
-  },
-  {
-    "id": 6,
-    "place_name": "Machu Picchu",
-    "category_name": "Peru",
-    "slogan": "Discover the Lost City of the Incas",
-    "short_description": "Embark on a once-in-a-lifetime journey to explore the legendary ruins nestled amidst the Andes mountains.",
-    "image_url": "https://example.com/machu_picchu.jpg"
+    "image_url": "https://i.postimg.cc/BZNGpW9N/145.jpg"
   }
 ]

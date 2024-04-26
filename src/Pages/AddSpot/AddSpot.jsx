@@ -3,10 +3,11 @@ import add from "../../assets/add.png"
 import useAuth from "../../Hooks/useAuth";
 import baseURL from "../../Utils/url";
 import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
-const AddSpot = () => {
-    const update = false
+const AddSpot = ({ update }) => {
     const { user } = useAuth()
+    const spot = useLoaderData()
 
 
     const handleAddProduct = e => {
@@ -29,23 +30,52 @@ const AddSpot = () => {
         const spotInfo = { spotName, AVGCost, seasonality, visitors, travel_time, countryName, location, image, description, userName, email }
         console.log(spotInfo);
 
-        fetch(`${baseURL}/spots`, {
-            method: "POST",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(spotInfo)
-        })
-            .then(res => res.json())
-            .then(data => {
-                form.reset()
-                Swal.fire({
-                    title: "Add Successfully",
-                    text: "You Post has been Added!",
-                    icon: "success"
-                });
-                console.log(data);
+        {
+            update ? fetch(`${baseURL}/spot/${spot._id}`, {
+                method: "PATCH",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(spotInfo)
             })
+                .then(res => res.json())
+                .then(data => {
+
+                    console.log(data);
+                    if (data.matchedCount > 0) {
+                        Swal.fire({
+                            title: "Update Successfully",
+                            text: "You Post has been Updated!!!",
+                            icon: "success"
+                        });
+                    }
+                })
+
+                :
+                fetch(`${baseURL}/spots`, {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(spotInfo)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        form.reset()
+
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: "Add Successfully",
+                                text: "You Post has been Added!",
+                                icon: "success"
+                            });
+                            console.log(data);
+                        }
+                    })
+        }
+
+
+
     }
 
     return (
@@ -76,7 +106,7 @@ const AddSpot = () => {
 
                             </label>
                             <input
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.spotName || ""}
                                 className="w-full p-2 border bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
                                 placeholder="Enter Spot Name"
@@ -90,7 +120,7 @@ const AddSpot = () => {
                             <input
                                 className="w-full p-2 border bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.AVGCost || ""}
                                 placeholder="Enter AVG Cost"
                                 id="AVGCost"
                                 name="AVGCost"
@@ -102,7 +132,7 @@ const AddSpot = () => {
                             <select
                                 name="seasonality"
                                 id="seasonality"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.seasonality || ""}
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
                                 placeholder="Select Seasonality"
@@ -119,7 +149,7 @@ const AddSpot = () => {
                             </label>
                             <input
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.travel_time || ""}
                                 type="text"
                                 placeholder="Enter Travel Time"
                                 id="travel_time"
@@ -131,7 +161,7 @@ const AddSpot = () => {
                             </label>
                             <input
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.visitors || ""}
                                 type="number"
                                 placeholder="Enter Total Visitors"
                                 id="visitors"
@@ -147,7 +177,7 @@ const AddSpot = () => {
                             <input
                                 className="w-full p-2 border bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.countryName || ""}
                                 placeholder="Enter Country Name"
                                 id="countryName"
                                 name="countryName"
@@ -158,7 +188,7 @@ const AddSpot = () => {
                             <input
                                 className="w-full p-2 border bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.location || ""}
                                 placeholder="Enter Location"
                                 id="location"
                                 name="location"
@@ -169,7 +199,7 @@ const AddSpot = () => {
                             <input
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.image || ""}
                                 placeholder="Enter Image  URL"
                                 id="image"
                                 name="image"
@@ -180,7 +210,7 @@ const AddSpot = () => {
                             </label>
 
                             <textarea
-                                defaultValue={"" || ""}
+                                defaultValue={spot?.description || ""}
                                 placeholder="Enter Description"
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
                                 id="description"

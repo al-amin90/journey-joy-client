@@ -10,7 +10,7 @@ const SportCard = ({ spot }) => {
     return (
         <div className="min-h-full">
             <div className="card min-h-full  card-compact font-open bg-base-100 shadow-make">
-                <figure className="md:h-60 h-[300px] rounded-xl bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${spot?.image})` }}>
+                <figure className="md:h-60 h-[250px] rounded-xl bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${spot?.image})` }}>
                 </figure>
                 <div className="relative px-6 mt-5">
                     <div style={{ borderRadius: "0% 33% 0% 27% / 0% 100% 10% 100% " }} className="absolute -top-12 border-2 text-lg bg-[#2BA2FF] text-white px-6 py-2 w-fit  font-medium ">

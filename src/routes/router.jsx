@@ -10,6 +10,7 @@ import Loader from "../Utils/Loader/Loader";
 import PrivateRoute from "./PrivateRoute";
 import AllSports from "../Pages/AllSports/AllSports";
 import baseURL from "../Utils/url";
+import MyList from "../Pages/MyList/MyList";
 
 const router = createBrowserRouter([
     {
@@ -23,8 +24,15 @@ const router = createBrowserRouter([
             {
                 path: "/addSpot",
                 element: <PrivateRoute>
-                    <AddSpot></AddSpot>
+                    <AddSpot update={false}></AddSpot>
                 </PrivateRoute>
+            },
+            {
+                path: "/update/:id",
+                element: <PrivateRoute>
+                    <AddSpot update={true}></AddSpot>
+                </PrivateRoute>,
+                loader: ({ params }) => fetch(`${baseURL}/spot/${params.id}`)
             },
             {
                 path: "/allSpot",
@@ -32,6 +40,12 @@ const router = createBrowserRouter([
                     <AllSports></AllSports>
                 </PrivateRoute>,
                 loader: () => fetch(`${baseURL}/spots`)
+            },
+            {
+                path: "/myList",
+                element: <PrivateRoute>
+                    <MyList></MyList>
+                </PrivateRoute>
             },
             {
                 path: "/singIn",

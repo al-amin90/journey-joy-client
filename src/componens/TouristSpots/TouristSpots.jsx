@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const TouristSpots = ({ banners }) => {
 
     const ban = banners[0]
-    console.log(ban);
 
 
     return (

@@ -1,8 +1,24 @@
 import React from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import { Zoom, toast } from 'react-toastify';
 
 const Navbar = () => {
     const navigate = useNavigate()
+    const { user, userSingOut } = useAuth()
+
+    const handleSingOut = () => {
+        userSingOut()
+            .then(() => {
+
+                toast.success("Log Out successfully", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    theme: "colored",
+                    transition: Zoom,
+                })
+            })
+    }
 
     const NavLinks = <>
         <NavLink
@@ -52,23 +68,30 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                <div className="navbar-end *:cursor-pointer gap-2">
-                    <div className="dropdown dropdown-hover">
-                        <div tabIndex={0} role="button" className=" m-1">
-                            <div className="avatar">
-                                <div className="w-10 rounded-full ring ring-[#2BA2FF] ring-offset-base-100 ring-offset-1">
-                                    <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&q=70&fm=webp" />
+                <div className="navbar-end relative">
+                    {
+                        user ?
+                            <div className="dropdown absolute dropdown-hover">
+                                <div tabIndex={0} role="button" className=" m-1">
+                                    <div className="avatar">
+                                        <div className="w-10 rounded-full ring ring-[#2BA2FF] ring-offset-base-100">
+                                            <img src={user?.photoURL} />
+                                        </div>
+                                    </div>
                                 </div>
+                                <ul tabIndex={0} className="dropdown-content menu pl-2 shadow bg-base-100 rounded-box w-52 font-bold relative right-2 z-20">
+                                    <li className='px-3 text-[#2BA2FF] py-2 border-b'>{user?.displayName} </li>
+                                    <li onClick={handleSingOut} className='px-3 hover:text-red-600 py-2 cursor-pointer'>Logout</li>
+                                </ul>
                             </div>
-                        </div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li className='px-3 py-1 border-b'>Name </li>
-                            <li className='px-3 py-1'>Logout</li>
-                        </ul>
-                    </div>
+                            :
+                            <div className='gap-2 flex'>
+                                <button onClick={() => navigate("/singIn")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</button>
+                                <button onClick={() => navigate("/register")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</button>
+                            </div>
+                    }
 
-                    <button onClick={() => navigate("/singIn")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</button>
-                    <button onClick={() => navigate("/register")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</button>
+
                 </div>
             </div>
         </div>

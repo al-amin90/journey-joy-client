@@ -40,7 +40,7 @@ const Banner = () => {
             >
                 {
                     banners.map(ban => <SwiperSlide key={ban.id}>
-                        <div className="md:h-[calc(100vh-95px)] h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ban?.image_url})` }}>
+                        <div className="md:h-[calc(100vh-88px)] h-[400px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ban?.image_url})` }}>
                             <div className="bg-black md:w-1/2 h-full bg-opacity-60 ">
                                 <div className="mx-auto h-full w-[90%] md:w-[85%] flex items-center">
                                     <div className=" mt-10 md:mt-0 text-white w-full md:w-auto">

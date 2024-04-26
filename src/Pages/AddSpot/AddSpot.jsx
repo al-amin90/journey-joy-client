@@ -97,7 +97,7 @@ const AddSpot = () => {
                             <input
                                 className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
                                 defaultValue={"" || ""}
-                                type="date"
+                                type="text"
                                 placeholder="Enter Travel Time"
                                 id="travel_time"
                                 name="travel_time"

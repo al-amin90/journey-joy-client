@@ -81,7 +81,7 @@ const Navbar = () => {
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content menu pl-2 shadow bg-base-100 rounded-box w-52 font-bold relative right-2 z-20">
                                     <li className='px-3 text-[#2BA2FF] py-2 border-b'>{user?.displayName} </li>
-                                    <li onClick={handleSingOut} className='px-3 hover:text-red-600 py-2 cursor-pointer'>Logout</li>
+                                    <li onClick={handleSingOut} className='px-3 hover:text-white rounded-b-xl bg-[#2BA2FF] py-2 cursor-pointer'>Logout</li>
                                 </ul>
                             </div>
                             :

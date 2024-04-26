@@ -4,6 +4,8 @@ import {
 import Root from "../MainLayout/Root";
 import Home from "../Pages/Home/Home";
 import AddSpot from "../Pages/AddSpot/AddSpot";
+import SingIn from "../Pages/SingIn/SingIn";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
             {
                 path: "/addSpot",
                 element: <AddSpot></AddSpot>
+            },
+            {
+                path: "/singIn",
+                element: <SingIn></SingIn>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             }
         ]
     },

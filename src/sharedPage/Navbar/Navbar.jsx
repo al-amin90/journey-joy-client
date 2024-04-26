@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    const navigate = useNavigate()
+
     const NavLinks = <>
         <NavLink
             to="/"
@@ -65,8 +67,8 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <a className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</a>
-                    <a className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</a>
+                    <button onClick={() => navigate("/singIn")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</button>
+                    <button onClick={() => navigate("/register")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</button>
                 </div>
             </div>
         </div>

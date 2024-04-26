@@ -1,8 +1,12 @@
 import { MdPlaylistAddCircle } from "react-icons/md";
 import add from "../../assets/add.png"
+import useAuth from "../../Hooks/useAuth";
+import baseURL from "../../Utils/url";
+import Swal from "sweetalert2";
 
 const AddSpot = () => {
     const update = false
+    const { user } = useAuth()
 
 
     const handleAddProduct = e => {
@@ -19,8 +23,29 @@ const AddSpot = () => {
         const image = form.image.value;
         const description = form.description.value;
 
-        const spotInfo = { spotName, AVGCost, seasonality, visitors, travel_time, countryName, location, image, description }
+        const userName = user.displayName;
+        const email = user.email;
+
+        const spotInfo = { spotName, AVGCost, seasonality, visitors, travel_time, countryName, location, image, description, userName, email }
         console.log(spotInfo);
+
+        fetch(`${baseURL}/spots`, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(spotInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                form.reset()
+                Swal.fire({
+                    title: "Add Successfully",
+                    text: "You Post has been Added!",
+                    icon: "success"
+                });
+                console.log(data);
+            })
     }
 
     return (
@@ -82,13 +107,11 @@ const AddSpot = () => {
                                 type="text"
                                 placeholder="Select Seasonality"
                             >
-                                <option defaultValue="Summer Serenity">Summer Serenity</option>
-                                <option defaultValue="Winter Whimsy">Winter Whimsy</option>
-                                <option defaultValue="Spring Sunshine">Spring Sunshine</option>
+                                <option defaultValue="Summer">Summer</option>
+                                <option defaultValue="Spring">Spring</option>
+                                <option defaultValue="Winter">Winter</option>
                                 <option defaultValue="Blossom Bliss">Blossom Bliss</option>
-                                <option defaultValue="Tropical Tranquility">Tropical Tranquility</option>
-                                <option defaultValue="Snowy Solitude">Snowy Solitude</option>
-                                <option defaultValue="Sunny Spectacle">Sunny Spectacle</option>
+                                <option defaultValue="Autumn">Autumn</option>
                             </select>
 
                             <label className="block mt-4 font-semibold mb-2 " htmlFor="travel_time">

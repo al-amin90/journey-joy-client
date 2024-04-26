@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "image": "https://example.com/statue_of_liberty.jpg",
+    "image": "https://i.postimg.cc/SKVx3yTK/pexels-pixabay-356844.jpg",
     "spotName": "Statue of Liberty",
     "countryName": "United States of America",
     "location": "New York, USA",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "image": "https://example.com/banff.jpg",
+    "image": "https://i.postimg.cc/x11jwX7b/pexels-souvenirpixels-417074.jpg",
     "spotName": "Banff National Park",
     "countryName": "Canada",
     "location": "Alberta, Canada",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "image": "https://example.com/niagara_falls.jpg",
+    "image": "https://i.postimg.cc/tgM499PC/pexels-ivan-torres-594557-1374585.jpg",
     "spotName": "Niagara Falls",
     "countryName": "Canada",
     "location": "Ontario, Canada",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "image": "https://example.com/christ_the_redeemer.jpg",
+    "image": "https://i.postimg.cc/25Tf4WDS/pexels-4fly-rj-1461715-2818895.jpg",
     "spotName": "Christ the Redeemer",
     "countryName": "Brazil",
     "location": "Rio de Janeiro, Brazil",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "image": "https://example.com/copacabana_beach.jpg",
+    "image": "https://i.postimg.cc/prK9VCwd/pexels-willian-santos-44398111-7443678-1.jpg",
     "spotName": "Copacabana Beach",
     "countryName": "Brazil",
     "location": "Rio de Janeiro, Brazil",
@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "image": "https://example.com/iguazu_falls.jpg",
+    "image": "https://i.postimg.cc/R0CFtfYg/pexels-rodolfoclix-1203565.jpg",
     "spotName": "Iguazu Falls",
     "countryName": "Argentina",
     "location": "Misiones Province, Argentina",
@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "image": "https://example.com/perito_moreno_glacier.jpg",
+    "image": "https://i.postimg.cc/XYtrRX1L/pexels-juan-felipe-ramirez-312591454-17409707.jpg",
     "spotName": "Perito Moreno Glacier",
     "countryName": "Argentina",
     "location": "Los Glaciares National Park, Argentina",
@@ -97,7 +97,7 @@
   },
   {
     "id": 9,
-    "image": "https://example.com/chichen_itza.jpg",
+    "image": "https://i.postimg.cc/BZNGpW9N/145.jpg",
     "spotName": "Chichen Itza",
     "countryName": "Mexico",
     "location": "Yucatán, Mexico",
@@ -109,7 +109,7 @@
   },
   {
     "id": 10,
-    "image": "https://example.com/tulum.jpg",
+    "image": "https://i.postimg.cc/Qd3rzTph/pexels-tommymila-6338647.jpg",
     "spotName": "Tulum",
     "countryName": "Mexico",
     "location": "Quintana Roo, Mexico",
@@ -121,7 +121,7 @@
   },
   {
     "id": 11,
-    "image": "https://example.com/machu_picchu.jpg",
+    "image": "https://i.postimg.cc/4xsFRbn4/pexels-chelsea-cook-1520634-2929906.jpg",
     "spotName": "Machu Picchu",
     "countryName": "Peru",
     "location": "Cusco Region, Peru",
@@ -133,7 +133,7 @@
   },
   {
     "id": 12,
-    "image": "https://example.com/sacred_valley.jpg",
+    "image": "https://i.postimg.cc/BvTZNPM1/pexels-julia-volk-5205043.jpg",
     "spotName": "Sacred Valley",
     "countryName": "Peru",
     "location": "Cusco Region, Peru",

@@ -9,6 +9,7 @@ import Register from "../Pages/Register/Register";
 import Loader from "../Utils/Loader/Loader";
 import PrivateRoute from "./PrivateRoute";
 import AllSports from "../Pages/AllSports/AllSports";
+import baseURL from "../Utils/url";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
                 path: "/allSpot",
                 element: <PrivateRoute>
                     <AllSports></AllSports>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: () => fetch(`${baseURL}/spots`)
             },
             {
                 path: "/singIn",

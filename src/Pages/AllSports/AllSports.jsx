@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
 import SportCard from "../../componens/SportCard/SportCard";
+import { useLoaderData } from "react-router-dom";
 
 
 const AllSports = () => {
-    const [spots, setSpots] = useState([])
+    const allSpots = useLoaderData()
 
-    useEffect(() => {
-        fetch(`places.json`)
-            .then(res => res.json())
-            .then(data => {
-                setSpots(data);
-            })
-    }, [])
+    console.log(allSpots);
 
 
     // console.log(spot);
@@ -24,8 +19,13 @@ const AllSports = () => {
                 <p className='md:w-3/4 mx-auto mb-12'>Discover iconic landmarks and breathtaking destinations from around the globe in our curated collection of popular tourist spots. Immerse yourself in the beauty of natural wonders.</p>
             </div>
 
-            <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4">
-                <SportCard spots={spots}></SportCard>
+            <div className="grid md:grid-cols-3  sm:grid-cols-2 grid-cols-1  gap-5">
+                {
+                    allSpots.map(spot => <SportCard
+                        key={spot?._id}
+                        spot={spot}></SportCard>)
+                }
+
             </div>
         </div>
     );

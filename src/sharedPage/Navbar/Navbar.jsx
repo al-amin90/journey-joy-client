@@ -50,8 +50,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='bg-base-100 my-3'>
-            <div className="navbar max-w-7xl mx-auto w-[90%] md:w-[85%]">
+        <div className='bg-base-100 relative z-50  md:my-3'>
+            <div className="navbar  max-w-7xl mx-auto w-full md:w-[85%]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
                             {NavLinks}
                         </ul>
                     </div>
-                    <a className=" text-2xl font-black">Journey<span className='text-[#2BA2FF]'>Joy</span></a>
+                    <a className="text-xl md:text-2xl font-black">Journey<span className='text-[#2BA2FF]'>Joy</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -85,9 +85,9 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             :
-                            <div className='gap-2 flex'>
-                                <button onClick={() => navigate("/singIn")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</button>
-                                <button onClick={() => navigate("/register")} className="py-2 px-5 text-base text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</button>
+                            <div className='gap-2 flex *:text-xs *:md:text-base' >
+                                <button onClick={() => navigate("/singIn")} className="py-2 px-5 text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Login</button>
+                                <button onClick={() => navigate("/register")} className="py-2 px-5 text-white bg-[#2BA2FF] rounded-full hover:shadow-xl font-semibold">Register</button>
                             </div>
                     }
 

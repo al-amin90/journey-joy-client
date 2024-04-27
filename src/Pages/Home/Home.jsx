@@ -1,12 +1,14 @@
 import React from 'react';
 import Banner from '../../componens/Banner/Banner';
 import TouristSpots from '../../componens/TouristSpots/TouristSpots';
+import Adventure from '../../componens/Adventure/Adventure';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <TouristSpots ></TouristSpots>
+            <Adventure></Adventure>
         </div>
     );
 };

@@ -10,7 +10,6 @@ import 'swiper/css/effect-fade';
 
 import { Autoplay, EffectFade } from 'swiper/modules';
 import { useEffect, useState } from "react";
-import TouristSpots from "../TouristSpots/TouristSpots";
 
 
 const Banner = () => {
@@ -71,7 +70,6 @@ const Banner = () => {
                     </SwiperSlide>)
                 }
             </Swiper>
-            <TouristSpots banners={banners}></TouristSpots>
         </div >
     );
 };

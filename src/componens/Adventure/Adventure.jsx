@@ -6,7 +6,7 @@ import { DiSizzlejs } from "react-icons/di";
 
 const Adventure = () => {
     return (
-        <div style={{ backgroundImage: `url(${back})` }} className='min-h-screen bg-no-repeat bg-cover w-full gap-7 -z-0 grid md:grid-cols-6 bg-opacity-10 pt-72 relative -top-44 px-4 pb-10'>
+        <div style={{ backgroundImage: `url(${back})` }} className='min-h-screen bg-no-repeat bg-cover w-full gap-7 -z-0 grid md:grid-cols-6 bg-opacity-10 pt-72 relative -top-28 px-4 pb-10'>
             <div className='md:col-span-2 md:order-1 order-2'>
                 <img className='rounded-lg' src={ad1} alt="" />
                 <div className='w-10/12 ml-auto'>

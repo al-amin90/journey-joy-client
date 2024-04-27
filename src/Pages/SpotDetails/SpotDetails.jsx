@@ -12,7 +12,7 @@ const SpotDetails = () => {
 
     return (
         <div className='bg-[#F4F4F4]'>
-            <div className='max-w-7xl grid py-24 grid-cols-2 mx-auto w-[90%]  md:w-[85%]'>
+            <div className='max-w-7xl grid py-24 mb-12 grid-cols-2 mx-auto w-[90%]  md:w-[85%]'>
                 <div className='mr-16'>
                     <figure><img className='rounded-xl object-cover h-80 w-full' src={spot?.image} alt="" /></figure>
 
@@ -20,7 +20,7 @@ const SpotDetails = () => {
                         <div className="flex items-center text-2xl justify-center">
                             <LuPartyPopper />
                         </div>
-                        <span>Enjoy your time in {spot?.countryName} to the fullest!</span>
+                        <span>Enjoy your time in <span className="font-semibold">{spot?.countryName}</span> to the fullest!</span>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@ const SpotDetails = () => {
                         <div className="flex justify-between border-b pb-4 px-6">
                             <div>
                                 <p className="text-xs font-medium text-[#A2AAAB]">AVG COST</p>
-                                <p className="text-2xl mt-1 font-bold text-[#2BA2FF]">{spot?.AVGCost}<span className="text-black/90 text-sm font-medium ">/Per Person</span></p>
+                                <p className="text-2xl mt-1 font-bold text-[#2BA2FF]">${spot?.AVGCost}<span className="text-black/90 text-sm font-medium ">/Per Person</span></p>
                             </div>
                             <button className="py-2 px-5 text-base border-2 border-[#2BA2FF] hover:text-[#2BA2FF] text-white duration-300 hover:bg-white bg-[#2BA2FF] rounded-full flex items-center gap-2 hover:shadow-xl font-medium">Book Now </button>
 

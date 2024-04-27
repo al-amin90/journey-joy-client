@@ -10,9 +10,9 @@ const Footer = () => {
                 <div className="container px-6 mx-auto space-y-6 divide-y md:space-y-12 divide-opacity-50">
                     <div className="grid lg:grid-cols-12 gap-10 md:gap-20    ">
                         <div className="pb-6 md:pb-0 md:col-span-3">
-                            <a rel="noopener noreferrer" href="#" className="flex  space-x-3 justify-start">
+                            <p rel="noopener noreferrer" href="#" className="flex  space-x-3 justify-start">
                                 <a className="text-3xl mb-3 font-black">Journey<span className='text-[#2BA2FF]'>Joy</span></a>
-                            </a>
+                            </p>
                             <p className='text-sm mb-10'>Explore the world with ease using our comprehensive travel platform. Discover top destinations, book accommodations, and plan your dream getaway with confidence. Your adventure begins here!</p>
 
                             <div>

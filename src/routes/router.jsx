@@ -6,17 +6,19 @@ import Home from "../Pages/Home/Home";
 import AddSpot from "../Pages/AddSpot/AddSpot";
 import SingIn from "../Pages/SingIn/SingIn";
 import Register from "../Pages/Register/Register";
-import Loader from "../Utils/Loader/Loader";
 import PrivateRoute from "./PrivateRoute";
 import AllSports from "../Pages/AllSports/AllSports";
 import baseURL from "../Utils/url";
 import MyList from "../Pages/MyList/MyList";
 import SpotDetails from "../Pages/SpotDetails/SpotDetails";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import CountrySpots from "../Pages/CountrySpots/CountrySpots";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 index: true,
@@ -48,6 +50,13 @@ const router = createBrowserRouter([
                     <SpotDetails></SpotDetails>
                 </PrivateRoute>,
                 loader: ({ params }) => fetch(`${baseURL}/spot/${params.id}`)
+            },
+            {
+                path: "/countrySpots/:name",
+                element: <PrivateRoute>
+                    <CountrySpots></CountrySpots>
+                </PrivateRoute>,
+                loader: ({ params }) => fetch(`${baseURL}/countrySpots/${params.name}`)
             },
             {
                 path: "/myList",

@@ -4,6 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import baseURL from "../../Utils/url";
 import Swal from "sweetalert2";
 import { useLoaderData } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 const AddSpot = ({ update }) => {
     const { user } = useAuth()
@@ -79,20 +80,37 @@ const AddSpot = ({ update }) => {
     }
 
     return (
-        <div className="pb-14 bg-contain bg-center bg-no-repeat"
+        <div className="pb-14 mb-12 bg-contain bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${add})` }}
         >
             <div className="shadow-lg rounded-3xl bg-white/80 backdrop-blur-md p-5 border mx-auto md:w-[85%] pt-10">
                 {/* Heading */}
                 <div className="mt-5 mb-10">
-                    <p className="flex items-center text-center justify-center text-3xl font-semibold">
-                        <span className="">
-                            <span className="text-[#2BA2FF]">
-                                {update ? "Update " : "Add "}
+                    <div className="flex items-center text-center justify-center text-3xl font-semibold">
+
+                        <h1>
+                            <span className="">
+                                <span className="text-[#2BA2FF]">
+                                    {update ? "Update " : "Add "}
+                                </span>
+                                Your
+                            </span>{' '}
+                            <span >
+                                <Typewriter
+                                    words={['Favorite Spot', 'Tourists Spot']}
+                                    loop={true}
+                                    cursor
+                                    cursorColor="#2BA2FF"
+                                    cursorStyle='|'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
                             </span>
-                            Your Tourists Spot
-                        </span>
-                    </p>
+                        </h1>
+
+
+                    </div>
                 </div>
 
 
@@ -174,14 +192,24 @@ const AddSpot = ({ update }) => {
                             <label className="block mb-2 font-semibold " htmlFor="countryName">
                                 Country Name
                             </label>
-                            <input
-                                className="w-full p-2 border bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
-                                type="text"
-                                defaultValue={spot?.countryName || ""}
-                                placeholder="Enter Country Name"
-                                id="countryName"
+                            <select
                                 name="countryName"
-                            />
+                                id="countryName"
+                                defaultValue={spot?.countryName || ""}
+                                className="w-full p-2 bg-[#2ba3ff09] border rounded-md focus:outline-[#2BA2FF]"
+                                type="text"
+                                placeholder="Select Spot Name"
+                            >
+                                <option defaultValue="United States of America">United States of America</option>
+                                <option defaultValue="Canada">Canada</option>
+                                <option defaultValue="Brazil">Brazil</option>
+                                <option defaultValue="Argentina">Argentina</option>
+                                <option defaultValue="Mexico">Mexico</option>
+                                <option defaultValue="Peru">Peru</option>
+                            </select>
+
+
+
                             <label className="block mb-2 font-semibold mt-4 " htmlFor="location">
                                 Location
                             </label>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "United States of America",
+    "image": "https://i.postimg.cc/DyCp9zKz/pexels-mikel-1239162.jpg",
+    "description": "Explore the vast landscapes, iconic cities, and diverse cultures of the United States, from the bustling streets of New York City to the majestic beauty of the Grand Canyon."
+  },
+  {
+    "id": 2,
+    "name": "Canada",
+    "image": "https://i.postimg.cc/bJBGKJh1/pexels-andre-furtado-43594-2916826.jpg",
+    "description": "Discover the natural wonders and friendly hospitality of Canada, from the stunning Rocky Mountains to the vibrant multicultural cities of Toronto and Vancouver."
+  },
+  {
+    "id": 3,
+    "name": "Brazil",
+    "image": "https://i.postimg.cc/PrrDNB6L/pexels-bertellifotografia-2868240.jpg",
+    "description": "Experience the vibrant rhythms, lush rainforests, and beautiful beaches of Brazil, home to iconic landmarks like the Christ the Redeemer statue and the Amazon Rainforest."
+  },
+  {
+    "id": 4,
+    "name": "Argentina",
+    "image": "https://i.postimg.cc/m25KnWJC/pexels-sesinando-1265215-3158519.jpg",
+    "description": "Immerse yourself in the rich culture, stunning landscapes, and delicious cuisine of Argentina, from the tango-filled streets of Buenos Aires to the breathtaking beauty of Patagonia."
+  },
+  {
+    "id": 5,
+    "name": "Mexico",
+    "image": "https://i.postimg.cc/nzN0knCh/pexels-rickyrecap-1720086.jpg",
+    "description": "Discover the ancient ruins, vibrant markets, and beautiful beaches of Mexico, where you can explore the Mayan pyramids, sample delicious street food, and relax in paradise."
+  },
+  {
+    "id": 6,
+    "name": "Peru",
+    "image": "https://i.postimg.cc/8PcLC25y/pexels-tracehudson-2516418.jpg",
+    "description": "Journey to the heart of the Andes and uncover the mysteries of Peru, home to the legendary Machu Picchu, the bustling streets of Lima, and the colorful traditions of the Andean villages."
+  }
+]

@@ -1,14 +1,30 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SportCard from "../../componens/SportCard/SportCard";
 import { useLoaderData } from "react-router-dom";
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 
 const AllSports = () => {
-    const allSpots = useLoaderData()
+    const loadedAllSpots = useLoaderData()
+    const [allSpots, setAllSpots] = useState(loadedAllSpots);
+    const [a, setA] = useState(null)
 
-    console.log(allSpots);
 
+    const handleSort = sort => {
+        console.log("clicked");
 
+        if (sort.value === "Ascending") {
+            const assPriceSpot = allSpots.sort((a, b) => parseFloat(a.AVGCost) - parseFloat(b.AVGCost))
+            setA("Ascending")
+            setAllSpots(assPriceSpot)
+        }
+        else if (sort.value === "Descending") {
+            const deePriceSpot = allSpots.sort((a, b) => parseFloat(b.AVGCost) - parseFloat(a.AVGCost))
+            setA("Descending")
+            setAllSpots(deePriceSpot)
+        }
+    }
     // console.log(spot);
 
 
@@ -20,7 +36,13 @@ const AllSports = () => {
             </div>
 
             <div className="flex items-center justify-center">
-                <select className="select font-semibold bg-[#2b516d] text-white mb-12 select-info w-36 max-w-xs">
+                <select
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Sort By AVG COST!"
+                    data-tooltip-place="top"
+                    onChange={(e) => handleSort(e.target)}
+                    name="sort"
+                    className="select font-semibold bg-[#2b516d] text-white mb-12 select-info w-36 max-w-xs">
                     <option defaultValue="" >AVG COST</option>
                     <option defaultValue="Ascending">Ascending</option>
                     <option defaultValue="Descending">Descending</option>
@@ -35,7 +57,8 @@ const AllSports = () => {
                 }
 
             </div>
-        </div>
+            <Tooltip id="my-tooltip" />
+        </div >
     );
 };
 

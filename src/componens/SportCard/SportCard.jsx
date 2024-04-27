@@ -35,7 +35,7 @@ const SportCard = ({ spot }) => {
                         <button onClick={() => navigate(`/spot/${spot?._id}`)} className="py-2 px-5 text-base border-2 border-[#2BA2FF] hover:text-[#2BA2FF] uppercase text-white duration-300 hover:bg-white bg-[#2BA2FF] rounded-full flex items-center gap-2 hover:shadow-xl font-semibold">Details <FaArrowRight /></button>
                         <div>
                             <p className="text-sm font-medium text-black/90">From</p>
-                            <p className="text-xl font-bold text-[#2BA2FF]">{spot?.AVGCost} <span className="text-black/90 text-sm font-medium "> Per Person</span></p>
+                            <p className="text-xl font-bold text-[#2BA2FF]">${spot?.AVGCost} <span className="text-black/90 text-sm font-medium "> Per Person</span></p>
                         </div>
                     </div>
                 </div>

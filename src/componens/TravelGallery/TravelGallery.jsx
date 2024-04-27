@@ -5,14 +5,17 @@ import cycle from '../../assets/cycle.png';
 import bag from '../../assets/bag.png';
 import naruto from '../../assets/naruto.png';
 import car from '../../assets/car.png';
+import { Fade } from 'react-awesome-reveal';
 
 const TravelGallery = () => {
     return (
         <div className='max-w-7xl  mx-auto w-[90%] mt-32 relative -top-40 md:w-[85%]'>
-            <div className='text-center'>
-                <h2 className='font-bold text-3xl mb-3'><span className='text-[#2BA2FF]'>Travel</span> Gallery</h2>
-                <p className='md:w-3/4 text-sm md:text-base mx-auto mb-12'>Explore our captivating travel gallery for instant inspiration and plan your next adventure with ease! Visual journey through our stunning travel gallery. </p>
-            </div>
+            <Fade>
+                <div className='text-center'>
+                    <h2 className='font-bold text-3xl mb-3'><span className='text-[#2BA2FF]'>Tourists</span> Countries</h2>
+                    <p className='md:w-3/4 text-sm md:text-base mx-auto mb-12'>Explore our captivating travel gallery for instant inspiration and plan your next adventure with ease! Visual journey through our stunning travel gallery. </p>
+                </div>
+            </Fade>
 
             <div>
                 <div className='grid grid-cols-1 md:grid-cols-3 h-full md:h-[16rem] lg:h-[22rem] gap-4'>

@@ -6,15 +6,15 @@ import { DiSizzlejs } from "react-icons/di";
 
 const Adventure = () => {
     return (
-        <div style={{ backgroundImage: `url(${back})` }} className='min-h-screen bg-no-repeat bg-cover w-full gap-7 -z-0 grid grid-cols-6 bg-opacity-10 pt-72 relative -top-52 pb-10'>
-            <div className='col-span-2'>
+        <div style={{ backgroundImage: `url(${back})` }} className='min-h-screen bg-no-repeat bg-cover w-full gap-7 -z-0 grid md:grid-cols-6 bg-opacity-10 pt-72 relative -top-44 px-4 pb-10'>
+            <div className='md:col-span-2 md:order-1 order-2'>
                 <img className='rounded-lg' src={ad1} alt="" />
                 <div className='w-10/12 ml-auto'>
                     <p className='text-xs font-medium text-white mt-10 mb-6'>While some of the company’s customers might be traveling within Colombia, they’ve clearly determined that many of their tour attendees come from English-speaking countries.</p>
                     <button className='bg-white z-10 flex items-center hover:bg-black hover:text-white text-black  rounded-full px-6 py-3 text-xs font-semibold '>Explore Now <DiSizzlejs className='text-lg' /></button>
                 </div>
             </div>
-            <div className='col-span-3'>
+            <div className='md:col-span-3 md:order-2 order-1'>
                 <div className=''>
                     <h4 className='text-3xl font-bold text-[#f3faff]'>Time for an adventure</h4>
                     <p className='text-xs font-medium text-white my-5'>And while the photos are likely what initially draw readers in, what sets this site apart from others is the personal perspective. You can tell that this site was made out of a passion for traveling.</p>
@@ -24,12 +24,12 @@ const Adventure = () => {
                         <button className='bg-white  flex items-center hover:bg-black hover:text-white text-black my-4 rounded-full px-6 py-3 text-xs font-semibold '>Explore Now <DiSizzlejs className='text-lg' /></button>
                     </div>
                 </div>
-                <div className='w-[80%]'>
-                    <img className='rounded-lg' src={ad2} alt="" />
+                <div className='md:w-[80%]  w-full'>
+                    <img className='rounded-lg ' src={ad2} alt="" />
                 </div>
             </div>
-            <div>
-                <img className='rounded-lg' src={ad3} alt="" />
+            <div className='order-3 '>
+                <img className='rounded-lg w-full' src={ad3} alt="" />
             </div>
         </div>
     );

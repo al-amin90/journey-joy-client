@@ -8,10 +8,10 @@ const Footer = () => {
         <div className='bg-[#2D373C] text-white'>
             <footer className="py-16 max-w-7xl  mx-auto w-[90%] ">
                 <div className="container px-6 mx-auto space-y-6 divide-y md:space-y-12 divide-opacity-50">
-                    <div className="grid grid-cols-12 gap-10    ">
-                        <div className="pb-6 md:pb-0 col-span-3">
-                            <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
-                                <a className="text-xl md:text-3xl mb-3 font-black">Journey<span className='text-[#2BA2FF]'>Joy</span></a>
+                    <div className="grid lg:grid-cols-12 gap-10 md:gap-20    ">
+                        <div className="pb-6 md:pb-0 md:col-span-3">
+                            <a rel="noopener noreferrer" href="#" className="flex  space-x-3 justify-start">
+                                <a className="text-3xl mb-3 font-black">Journey<span className='text-[#2BA2FF]'>Joy</span></a>
                             </a>
                             <p className='text-sm mb-10'>Explore the world with ease using our comprehensive travel platform. Discover top destinations, book accommodations, and plan your dream getaway with confidence. Your adventure begins here!</p>
 
@@ -37,7 +37,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center md:text-left col-span-3">
+                        <div className="text-center md:text-left lg:col-span-3">
                             <p className="pb-4 text-xl font-bold">Quick Link</p>
                             <ul className='space-y-1'>
                                 <li>
@@ -60,7 +60,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="text-center md:text-left col-span-3">
+                        <div className="text-center md:text-left lg:col-span-3">
                             <p className="pb-4 text-xl font-bold">Tour Type</p>
                             <ul className='space-y-1'>
                                 <li>
@@ -81,26 +81,26 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="text-center md:text-left col-span-3">
+                        <div className="text-center md:text-left lg:col-span-3">
                             <p className="pb-4 text-xl font-bold">Contact Us:</p>
                             <ul className='space-y-2'>
                                 <li>
                                     <a className='text-xl  font-black'></a>
                                 </li>
                                 <li>
-                                    <a className="flex items-center gap-1" rel="noopener noreferrer" href="#">
+                                    <a className="flex items-center gap-2" rel="noopener noreferrer" href="#">
                                         <FaPhoneAlt />
                                         <span> +1 763-227-5032</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="flex items-center gap-1" rel="noopener noreferrer" href="#">
+                                    <a className="flex items-center gap-2" rel="noopener noreferrer" href="#">
                                         <MdEmail />
                                         <span> info@example.com</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="flex items-start gap-1" rel="noopener noreferrer" href="#">
+                                    <a className="flex items-start text-left gap-2" rel="noopener noreferrer" href="#">
                                         <FaLocationDot />
                                         <span>  2752 Willison Street Eagan, United State</span>
                                     </a>

@@ -17,7 +17,7 @@ const TouristSpots = () => {
         <div className='max-w-7xl  mx-auto w-[90%] mt-32 my-24 md:w-[85%]'>
             <div className='text-center'>
                 <h2 className='font-bold text-3xl mb-3'><span className='text-[#2BA2FF]'>Popular</span> Tourists Spots</h2>
-                <p className='md:w-3/4 mx-auto mb-12'>Explore the latest must-visit destinations, from iconic landmarks to hidden gems. Immerse yourself in captivating cultures and breathtaking landscapes for unforgettable experiences.</p>
+                <p className='md:w-3/4 text-sm md:text-base mx-auto mb-12'>Explore the latest must-visit destinations, from iconic landmarks to hidden gems. Immerse yourself in captivating cultures and breathtaking landscapes for unforgettable experiences.</p>
             </div>
 
 

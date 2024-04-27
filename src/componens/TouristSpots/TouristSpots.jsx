@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import baseURL from '../../Utils/url';
 import { SiFireship } from "react-icons/si";
+import { useNavigate } from 'react-router-dom';
 
 const TouristSpots = () => {
     const [spots, setSpots] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`${baseURL}/spots`)
@@ -25,7 +27,7 @@ const TouristSpots = () => {
             <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     spots.slice(3, 9).map(spot => (
-                        <div className="md:h-72 h-[250px] z-20 rounded-xl bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${spot?.image}})` }}>
+                        <div key={spot?._id} className="md:h-72 h-[250px] z-20 rounded-xl bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${spot?.image}})` }}>
                             <div className="bg-black h-full p-6 rounded-xl bg-opacity-60 ">
                                 <div className="flex flex-col min-h-full">
                                     <div className='flex  justify-end'>
@@ -43,7 +45,7 @@ const TouristSpots = () => {
                                             </p>
 
                                             <div className=" flex items-center justify-between">
-                                                <button className="bg-[#2BA2FF] rounded-full py-2 mt-3 px-6 text-white hover:shadow-md hover:border hover:border-[#2BA2FF]   font-semibold hover:bg-transparent">
+                                                <button onClick={() => navigate(`/spot/${spot?._id}`)} className="bg-[#2BA2FF] rounded-full py-2 mt-3 px-6 text-white hover:shadow-md hover:border hover:border-[#2BA2FF]   font-semibold hover:bg-transparent">
                                                     Details
                                                 </button>
                                                 <p className="text-xl  font-bold text-[#2BA2FF]"><span className='text-white  text-xl border-b-2'>{spot?.AVGCost}</span></p>

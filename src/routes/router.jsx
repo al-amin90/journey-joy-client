@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllSports from "../Pages/AllSports/AllSports";
 import baseURL from "../Utils/url";
 import MyList from "../Pages/MyList/MyList";
+import SpotDetails from "../Pages/SpotDetails/SpotDetails";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,13 @@ const router = createBrowserRouter([
                     <AllSports></AllSports>
                 </PrivateRoute>,
                 loader: () => fetch(`${baseURL}/spots`)
+            },
+            {
+                path: "/spot/:id",
+                element: <PrivateRoute>
+                    <SpotDetails></SpotDetails>
+                </PrivateRoute>,
+                loader: ({ params }) => fetch(`${baseURL}/spot/${params.id}`)
             },
             {
                 path: "/myList",

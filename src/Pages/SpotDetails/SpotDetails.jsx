@@ -12,11 +12,11 @@ const SpotDetails = () => {
 
     return (
         <div className='bg-[#F4F4F4]'>
-            <div className='max-w-7xl grid py-24 mb-12 grid-cols-2 mx-auto w-[90%]  md:w-[85%]'>
-                <div className='mr-16'>
+            <div className='max-w-7xl grid py-24 mb-12 grid-cols-1 lg:grid-cols-2 mx-auto w-[90%]  md:w-[85%]'>
+                <div className='mb-4 lg:mr-16'>
                     <figure><img className='rounded-xl object-cover h-80 w-full' src={spot?.image} alt="" /></figure>
 
-                    <div className="flex items-center mt-4 p-6 space-x-4 rounded-md dark:bg-gray-50 ">
+                    <div className="flex items-center mt-4 p-6 space-x-4 rounded-md bg-gray-50 ">
                         <div className="flex items-center text-2xl justify-center">
                             <LuPartyPopper />
                         </div>

@@ -39,9 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/allSpot",
-                element: <PrivateRoute>
-                    <AllSports></AllSports>
-                </PrivateRoute>,
+                element: <AllSports></AllSports>,
                 loader: () => fetch(`${baseURL}/spots`)
             },
             {

@@ -11,8 +11,8 @@ const AllSports = () => {
     const [a, setA] = useState(null)
 
 
+
     const handleSort = sort => {
-        console.log("clicked");
 
         if (sort.value === "Ascending") {
             const assPriceSpot = allSpots.sort((a, b) => parseFloat(a.AVGCost) - parseFloat(b.AVGCost))

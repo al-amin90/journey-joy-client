@@ -17,10 +17,8 @@ const TouristSpots = () => {
             .then(data => {
                 setLoading(false)
                 setSpots(data)
-                console.log(data);
             })
 
-        console.log(spots);
     }, [])
 
     return (

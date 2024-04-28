@@ -1,6 +1,6 @@
 import useAuth from '../../Hooks/useAuth';
 import singIn from '../../assets/singin.png';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useState } from 'react';
@@ -11,6 +11,8 @@ const SingIn = () => {
     const [isShowed, setIsShowed] = useState(true)
     const navigate = useNavigate();
     const { userSingIn } = useAuth()
+    const location = useLocation()
+    console.log(location.state);
 
     const handleSignIn = e => {
         e.preventDefault()
@@ -23,7 +25,7 @@ const SingIn = () => {
 
         userSingIn(email, password)
             .then(result => {
-                navigate("")
+                navigate(location?.state ? location.state : "/")
 
                 console.log(result);
                 toast.success("Login successfully", {

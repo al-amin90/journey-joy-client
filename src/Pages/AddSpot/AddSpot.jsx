@@ -151,7 +151,7 @@ const AddSpot = ({ update }) => {
                                 name="seasonality"
                                 id="seasonality"
                                 defaultValue={spot?.seasonality || ""}
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                className="w-full p-2 border dark:bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
                                 placeholder="Select Seasonality"
                             >
@@ -166,7 +166,7 @@ const AddSpot = ({ update }) => {
                                 Travel Time
                             </label>
                             <input
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                className="w-full p-2 border dark:bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 defaultValue={spot?.travel_time || ""}
                                 type="text"
                                 placeholder="Enter Travel Time"
@@ -178,7 +178,7 @@ const AddSpot = ({ update }) => {
                                 Total Visitors PerYear
                             </label>
                             <input
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                className="w-full p-2 border dark:bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 defaultValue={spot?.visitors || ""}
                                 type="number"
                                 placeholder="Enter Total Visitors"
@@ -225,7 +225,7 @@ const AddSpot = ({ update }) => {
                                 Image
                             </label>
                             <input
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                className="w-full p-2 border dark:bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 type="text"
                                 defaultValue={spot?.image || ""}
                                 placeholder="Enter Image  URL"
@@ -240,7 +240,7 @@ const AddSpot = ({ update }) => {
                             <textarea
                                 defaultValue={spot?.description || ""}
                                 placeholder="Enter Description"
-                                className="w-full p-2 border rounded-md focus:outline-[#2BA2FF]"
+                                className="w-full p-2 border dark:bg-[#2ba3ff09] rounded-md focus:outline-[#2BA2FF]"
                                 id="description"
                                 cols="10"
                                 name="description"

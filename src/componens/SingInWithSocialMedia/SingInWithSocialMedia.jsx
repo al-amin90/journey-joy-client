@@ -1,13 +1,18 @@
 import React from 'react';
 import useAuth from '../../Hooks/useAuth';
 import { Zoom, toast } from 'react-toastify';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SingInWithSocialMedia = () => {
     const { googleWithSingIn, githubWithSingIn } = useAuth()
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const loginSocial = socialMedia => {
         socialMedia()
             .then(result => {
+
+                navigate(location?.state ? location.state : "/")
                 console.log(result.user);
                 toast.success("Login successfully", {
                     position: "top-center",

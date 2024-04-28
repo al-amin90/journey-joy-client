@@ -10,7 +10,7 @@ const SportCard = ({ spot }) => {
 
     return (
         <div className="min-h-full">
-            <div className="card min-h-full  card-compact font-open bg-base-100 shadow-make">
+            <div className="card min-h-full bg-white dark:bg-white/90 card-compact font-open shadow-make">
                 <figure className="md:h-60 h-[250px] rounded-xl bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${spot?.image})` }}>
                 </figure>
                 <div className="relative px-6 mt-5">
@@ -20,7 +20,7 @@ const SportCard = ({ spot }) => {
                             {spot?.travel_time}
                         </div>
                     </div>
-                    <h2 className="text-2xl mt-2 font-bold">{spot?.spotName}</h2>
+                    <h2 className="text-2xl dark:text-black/70 mt-2 font-bold">{spot?.spotName}</h2>
 
                     <p className="flex text-base mt-4 font-semibold text-[#2BA2FF] items-center ">
                         <FaPeoplePulling className=" text-xl mr-2" /> Visitors:

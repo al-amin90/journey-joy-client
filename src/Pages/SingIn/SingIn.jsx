@@ -77,7 +77,7 @@ const SingIn = () => {
                                 <form onSubmit={handleSignIn} className="space-y-3 w-full ">
 
                                     <div>
-                                        <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                                        <fieldset className="border-x border-solid border-gray-300 p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 Email
                                             </legend>
@@ -91,7 +91,7 @@ const SingIn = () => {
                                         </fieldset>
                                     </div>
                                     <div>
-                                        <fieldset className="border relative border-solid border-gray-300 p-3 w-full rounded">
+                                        <fieldset className="border-x relative border-solid border-gray-300 p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 Password
                                             </legend>

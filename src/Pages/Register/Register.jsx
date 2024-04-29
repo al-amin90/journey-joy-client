@@ -108,7 +108,7 @@ const Register = () => {
 
                                 <form onSubmit={handleSignUp} className="space-y-3 w-full ">
                                     <div>
-                                        <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                                        <fieldset className="border-x border-solid border-gray-300 p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 Name
                                             </legend>
@@ -123,7 +123,7 @@ const Register = () => {
                                     </div>
 
                                     <div>
-                                        <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                                        <fieldset className="border-x border-solid border-gray-300 p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 Email
                                             </legend>
@@ -137,7 +137,7 @@ const Register = () => {
                                         </fieldset>
                                     </div>
                                     <div>
-                                        <fieldset className="border border-solid border-gray-300 relative p-3 w-full rounded">
+                                        <fieldset className="border-x border-solid border-gray-300 relative p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 Password
                                             </legend>
@@ -158,7 +158,7 @@ const Register = () => {
                                     </div>
 
                                     <div>
-                                        <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                                        <fieldset className="border-x border-solid border-gray-300 p-3 w-full rounded">
                                             <legend className=" font-medium text-black/60">
                                                 ImageURL
                                             </legend>

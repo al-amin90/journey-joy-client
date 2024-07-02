@@ -20,8 +20,6 @@ on access there data, the server secure by JWT and client side has Private Route
 
 - Users can toggle between dark and light themes to suit their preferences.
 
-- The website has smooth animations to enhance the user experience.
-
 ## Implement packages
 
 - **React-simple-typewriter**
@@ -38,7 +36,7 @@ on access there data, the server secure by JWT and client side has Private Route
 
 ## Technologies Used
 
-- Frontend: React.js, TailwindCSS for building the user interface.
+- Stack : React.js, TailwindCSS for building the user interface , node.js, express.js for building Backend.
 
 - Database: MongoDB for storing user data and travel destinations.
 

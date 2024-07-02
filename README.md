@@ -10,23 +10,17 @@ https://journey-joy-client.web.app/
 
 ## Features and Characteristics
 
-- Home Page: The homepage provides an overview of popular destinations and allows users to navigate to different sections of the website
+- Money Donation System, User can donate selected or custom Amount.
 
-- Add Visited Places: Users can add their visited places to their profile, including details such as the location, description, and photos.
+- User can Request or Donate Food , if they want they can modify , delete, there
+posts.
 
-- Edit and Remove Places: Users can edit or remove the places they have added from their profile.
+- Authentication and Security Measures System, if he/she call API in the server they
+on access there data, the server secure by JWT and client side has Private Route.
 
-- Edit and Remove Places: Users can edit or remove the places they have added from their profile.
+- Users can toggle between dark and light themes to suit their preferences.
 
-- Details Page: Each destination has its own details page, accessible via a private route, where users can view more information and photos.
-
-- Private Routes: Certain pages, such as the details page, are protected and can only be accessed by authenticated users.
-
-- Animation: The website features smooth animations to enhance the user experience.
-
-- Dark and Light Theme: Users can toggle between dark and light themes to suit their preferences.
-
-- Sign Up & Sign In: Users can create an account and sign in to access the platform's features.
+- The website has smooth animations to enhance the user experience.
 
 ## Implement packages
 
@@ -44,7 +38,7 @@ https://journey-joy-client.web.app/
 
 ## Technologies Used
 
-- Frontend: React.js for building the user interface, with animations implemented using TailwindCSS and JavaScript.
+- Frontend: React.js, TailwindCSS for building the user interface.
 
 - Database: MongoDB for storing user data and travel destinations.
 

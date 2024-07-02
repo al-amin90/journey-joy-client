@@ -20,6 +20,20 @@ on access there data, the server secure by JWT and client side has Private Route
 
 - Users can toggle between dark and light themes to suit their preferences.
 
+## Installation Steps
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/al-amin90/journey-joy-client.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd folder-name
+    ```
+3. Install dependencies:
+    ```sh
+    npm i
+    ```
 ## Implement packages
 
 - **React-simple-typewriter**
@@ -32,7 +46,6 @@ on access there data, the server secure by JWT and client side has Private Route
 - daisy ui
 - firebase
 - mongoDB
-
 
 ## Technologies Used
 

@@ -10,15 +10,12 @@ https://journey-joy-client.web.app/
 
 ## Features and Characteristics
 
-- Money Donation System, User can donate selected or custom Amount.
+- Click on the Specific Country , it will show all tourist spots of that country. (posted
+by users)
 
-- User can Request or Donate Food , if they want they can modify , delete, there
-posts.
+- User can add there favourite spots delete & modify them.
 
-- Authentication and Security Measures System, if he/she call API in the server they
-on access there data, the server secure by JWT and client side has Private Route.
-
-- Users can toggle between dark and light themes to suit their preferences.
+- Sort by AVG Cost & good UI/UX Design
 
 ## Installation Steps
 
